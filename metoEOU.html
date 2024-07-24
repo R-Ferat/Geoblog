@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoMagia</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor">
+              <div class="barra">
+                 <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin">Geo<span
+                     class="logo__bold">Magia</span></h1>
+                 </a>
+                 <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                 </nav>
+              </div>
+        </div>
+
+        <div class="header__texto">
+            <h2 class="no-margin">Monitoreo de las Deformaciones del Estadio Olímpico Universitario</h2>
+            <p class="no-margin">La Geomática Monitoreando estructuras de Ingeniería Civil</p>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <h3 class="centrar-texto">Metodología</h3>
+        <p>
+            Nuestro enfoque se divide en varias etapas, las cuales Implican 3 visitas al Estadio:
+        </p>
+        <ul>
+           <li>Inspección Visual: En esta fase inicial, realizaremos una inspección detallada del estadio
+            para identificar posibles áreas de interés y establecer puntos clave para el monitoreo.</li> 
+           <li>Colocación de Puntos y Monitoreo sin Público: Utilizando estaciones totales y equipos
+                GNSS, colocaremos puntos de monitoreo estratégicos en el estadio y realizaremos
+                mediciones en condiciones sin público para establecer una línea base.</li>
+            <li>Monitoreo con Estadio Lleno: Durante un evento deportivo durante(el juego entre Pumas
+                y León del 14/04/24), llevamos a cabo un monitoreo estático en tiempo real para evaluar
+                posibles deformaciones o desplazamientos bajo carga.</li>
+        </ul>
+        <div class="contenedor-metodologia">
+            <h3 class="centrar-texto">Primer Visita: Inspección</h3>
+            <p>La primera visita al estadio se llevó a cabo con el propósito de planificar y organizar las futuras mediciones, durante esta visita:</p>
+            <img src="img/estadio_04.jpg.png" alt="Estadio">
+            <ul>
+                <li>Inspección del Estadio: Se recorrió el estadio para identificar las ubicaciones estratégicas donde se colocarían los equipos de medición. Se seleccionaron puntos clave tanto en el campo como en las gradas.</li>
+            </ul>
+            <img src="img/stickersEOU.png" alt="Estadio">
+            <li>Armado de malla: Se recorrió el estadio para identificar las ubicaciones estratégicas donde se colocarían los equipos de medición. La recomendación por parte del depto de estructuras fué monitorear intersecciones viga/columna y así se armó, considerando también algunos túneles.</li>
+            <img src="img/stickersEOU_02.jpg" alt="Estadio">
+            <li>Stickers reflejantes: Mandamos a hacer stickes personalizados con la finalidad de que el público no los quitara.</li>
+
+        </div>
+<p>La instalación de el GNSS es con la finalidad de colocar una línea base dentro del estadio, a nivel de cancha para que no sea afectado por el movimiento de las gradas, pues con ella se orientaría la estación robótica para obtener coordenadas en cada serie de medición.</p>
+<div class="contenedor-metodologia">
+    <h3 class="centrar-texto">Segunda Visita: Pumas vs León (cierre de liguilla)</h3>
+    <p>Se realizó durante un evento deportivo con la presencia de público el día 14 de Abril del 2024:</p>
+    <img src="img/monitoreoEOU_01.png" alt="Estadio">
+    <ul>
+        <li>Instalación de la Estación Robótica y Calibración Inicial: La estación robótica se colocó en una posición estratégica con buena visibilidad de los puntos de control, asegurando estabilidad. Luego se verificaron las coordenadas de los puntos de control mediante mediciones preliminares y conexión con puntos base usando la línea base GNSS.</li>
+    </ul>
+    <img src="img/monitoreoEOU_02.png" alt="Estadio">
+    <li>Series con la SX12: Las mediciones comenzaron a las 5:00 pm cuando el estadio empezaba a llenarse. Se realizaron entre 2 y 5 mediciones por punto, aunque no se pudo medir toda la malla debido a la obstrucción de espectadores.</li>
+    <img src="img/monitoreoEOU_04.png.jpg" alt="Estadio">
+    <li>Escaneos Adicionales con la SX12: Después de cada serie de mediciones, se realizaron escaneos de la grada, proporcionando datos georreferenciados útiles para orientaciones posteriores con el drone y la TRIMBLE X7.</li>
+
+</div>
+
+</div>
+<div class="contenedor-metodologia">
+    <h3 class="centrar-texto">Tercer Visita: Sin público</h3>
+    <p>Se coordinó un día sádabdo y al final de la temporada de futbol mx para tenerlo vació:</p>
+    <img src="img/est_robot_01.jpg" alt="Estadio">
+    <ul>
+        <li>Medicion con la SX12: e realizó una única serie de mediciones utilizando la estación robótica para obtener datos de referencia en el estadio vacío. Esta serie de mediciones sirvió para comparar y validar los datos obtenidos durante el evento con espectadores, asegurando así la precisión y confiabilidad de los resultados.</li>
+    </ul>
+    <img src="img/escaneoEOU.png" alt="Estadio">
+    <li>Uso del Escáner TRIMBLE X7: Se utilizó para generar una nube de puntos del estadio vacío con el objetivo de proporcionar un antecedente al departamento de estructuras de la Facultad de Ingeniería y Patrimonio Universitario.</li>
+    <img src="img/fotogrametría.png" alt="Estadio">
+    <li>Uso del Drone para Fotogrametría: Se programó un vuelo con un Phantom 4 Pro, utilizando 4 puntos de control en el terreno (GCP) georreferenciados con GNSS usando el método RTK, con la finalidad de empalmarlo con la nube del escaner y ahorrar trabajo de escaneo.</li>
+
+</div>
+
+
+
+    </main>
+
+<footer class="footer">
+    <div class="contenido">
+        <div class="barra">
+            <a class="logo" href="index.html">
+               <h1 class="logo__nombre no-margin">Geo<span
+                class="logo__bold">Magia</span></h1>
+            </a>
+            <nav class="navegacion">
+               <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+               <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+               <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+            </nav>
+         </div>
+    </div>
+</footer>
+
+</body>
+</html>

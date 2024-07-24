@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoMagia</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor">
+              <div class="barra">
+                 <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin">Geo<span
+                     class="logo__bold">Magia</span></h1>
+                 </a>
+                 <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                 </nav>
+              </div>
+        </div>
+
+        <div class="header__texto">
+            <h2 class="no-margin">Monitoreo de las Deformaciones del Estadio Olímpico Universitario</h2>
+            <p class="no-margin">Los Resultados del Monitoreo</p>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <h3 class="centrar-texto">Resultado de las Series de Medición</h3>
+
+        <div class="resultado">
+            <h3>Visualización del Modelo 3D interpolado</h3>
+            <iframe src="img/modelo_3d.html" width="800" height="600" style="border:none;">
+                Tu navegador no soporta iframes.
+            </iframe>
+        </div>
+
+        <div class="resultado">
+            <h3>Visualización del Modelo 3D sin intersecciones para Comparar las SERIES</h3>
+            <iframe src="img/modelo_3d_comparativo.html" width="800" height="600" style="border:none;">
+                Tu navegador no soporta iframes.
+            </iframe>
+            <p>Instrucciones de uso: puedes interactuar con la barra de la derecha, apaga y prende los puntos o las líneas que unen los puntos, puedes hacer un zoom, desplazarte y rotarlo con el ratón. Las deformaciones sólo son notorias si te acercas y juegas con el modelo 3D.</p>
+        </div>
+
+    </main>
+
+    <div class="container-results">
+        <h1>Análisis y Discusión</h1>
+        <section class="summary">
+            <h3>Interpretación de las Deformaciones en las Vigas y Columnas</h3>
+            <p> 
+                Nuestro estudio escolar reveló que el muro de contención en la parte más
+                elevada del estadio y el volado en la parte inferior fueron los elementos que más se
+                deformaron bajo la carga de los espectadores. Estos hallazgos, aunque preliminares,
+                tendrían que ser revizados por un estructurista y bajo las debodas nórmas. A través de
+                este trabajo, hemos aprendido la importancia del monitoreo estructural y esperamos que
+                nuestra investigación inspire estudios futuros más detallados y profesionales para garantizar
+                la seguridad y estabilidad de los estadios.En conclusión, aunque tanto las vigas como las columnas pueden deformarse significativamente bajo carga, 
+                las vigas suelen mostrar una mayor deformación visible en condiciones normales de carga debido a la flexión.</p>
+        </section>
+        
+        <section class="impact">
+            <h3>Impacto de la Presencia de Espectadores en la Estructura</h3>
+            <p>En nuestro reciente estudio escolar sobre el impacto de la presencia de espectadores en la estructura de un estadio, instalamos puntos de monitoreo en diversos elementos estructurales, incluyendo vigas, columnas, un muro de contención en la parte más elevada del estadio y un volado en la parte inferior, la presencia y inquietud de los expectadores fueron una importante limitación para realizar las Series de medición.</p>
+        </section>
+
+        <section class="scan-results">
+            <h3>Resultado del Escaneo con el Escáner</h3>
+            <video controls>
+                <source src="img/RECORRIDO3D.MP4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </section>
+
+        <section class="impact">
+            <h3>Aplicación y Eficacia de las Tecnologías Utilizadas</h3>
+
+            <ul>
+                <li>Estación Robótica: La utilización de una estación robótica para el levantamiento de
+                    puntos específicos en las gradas resultó en la obtención de datos altamente precisos
+                    y fiables. La orientación de la estación mediante el método de bisección, usando dos
+                    puntos de control, demostró ser efectiva y eficiente, proporcionando la precisión
+                    necesaria para las mediciones requeridas. Las gráficas y datos generados
+                    permitieron una evaluación detallada del comportamiento estructural bajo diferentes
+                    condiciones de carga.</li>
+                <li>Sistemas GNSS: La implementación de GNSS para establecer y corregir los puntos
+                    base fue fundamental para garantizar la precisión de las coordenadas obtenidas con
+                    la estación robótica. Esta tecnología permitió corregir posibles errores y asegurar
+                    que las mediciones estuvieran georreferenciadas con alta exactitud.</li>
+                <li>Fotogrametría: El vuelo fotogramétrico realizado sobre el estadio permitió la
+                    creación de un modelo 3D detallado, esencial para el análisis espacial y la
+                    visualización de posibles deformaciones estructurales. Esta técnica proporcionó una
+                    representación visual clara y detallada del estadio, facilitando la identificación de
+                    cualquier anomalía.</li>
+                <li>Escaneo Láser: El escaneo láser de la zona del pebetero ofreció una captura
+                    precisa y detallada de la geometría de esta área específica. Las nubes de puntos
+                    generadas proporcionaron datos tridimensionales que fueron cruciales para el
+                    análisis estructural, permitiendo detectar incluso las deformaciones más sutiles.</li>
+            </ul>
+        </section>
+
+<footer class="footer">
+    <div class="contenido">
+        <div class="barra">
+            <a class="logo" href="index.html">
+               <h1 class="logo__nombre no-margin">Geo<span
+                class="logo__bold">Magia</span></h1>
+            </a>
+            <nav class="navegacion">
+               <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+               <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+               <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+            </nav>
+         </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>

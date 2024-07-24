@@ -1,0 +1,480 @@
+:root{
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primario: #5a772b;
+    --blanco: #ffff;
+    --negrito: #000000;
+    --grisclarito: #e1e1e1;
+
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* globales */
+
+.contenedor {
+    width: min(90%, 120rem);
+    width: 90%;
+    width: min(90%, 120rem);
+    margin: 0 auto;
+    text-align: justify;
+}
+.contenedor h3 {
+    grid-column: span 2;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+h1 {
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2;
+}
+h4 {
+    font-size: 2.8;
+}
+img {
+    max-width: 100%;
+}
+
+/* helpers o utilidades */
+
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+    text-align: end;
+    text-align: right;
+    text-align: left;
+}
+
+.header{
+    background-color: var(--negrito);
+    height: 45rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.header__texto{
+    text-align: center;
+    color: var(--blanco);
+}
+@media (min-width: 768px) {
+     .header__texto{
+        margin-top: 15rem;
+     }
+}
+.barra{
+    padding: 4rem;
+}
+@media (min-width: 768px) {
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.logo {
+    color: var(--blanco);
+}
+.logo__nombre {
+    font-weight: 400;
+}
+.logo__bold {
+    font-weight: 700;
+}
+@media (min-width: 768px) {
+     .navegacion{
+        display: flex;
+        gap: 2rem;
+     }
+}
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+@media (min-width: 768px) {
+     .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+
+     }
+}
+.entrada{
+    border-bottom:  1px solid var(--grisclarito);
+    margin-bottom: 2rem;
+
+}
+.entrada:last-of-type{ /*permite seleccionar un objeto sin poner una clase extra, aquí se indicó la última*/
+    border: none;
+    margin-bottom: 0;
+}
+.boton{
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border: none;
+}
+.boton:hover{
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    display: inline-block;
+}
+.boton--primario{
+    background-color: var(--negrito);
+
+}
+.boton--secundario{
+    background-color: var(--primario);
+}
+.cursos{
+    list-style: none;
+}
+.widget-curso{
+     border-bottom: 1px solid var(--grisclarito);
+     margin-bottom: 2rem;
+}
+.widget-curso:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+.widget-curso__label{
+     font-family: var(--fuenteHeading);
+     font-weight: bold;
+}
+.widget-curso__info{
+      font-weight: 400;
+}     
+.widget-curso__label,
+.widget-curso__info{
+    font-size: 2rem;
+}
+
+.footer{
+    background-color: var(--negrito);
+    margin-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+/*Sobre Nosotros*/
+@media (min-width: 768px) {
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        justify-content: space-between;
+     }
+
+
+}
+
+.curso{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--grisclarito);
+}
+@media (min-width: 768px) {
+    .curso{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+    }
+}
+.curso:last-of-type{
+    border: none;
+}
+
+.curso__label{
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+.curso__info{
+     font-weight: 400;
+}     
+.curso__label,
+.curso__info{
+   font-size: 2rem;
+}
+
+.contacto-bg{
+    background-image: url(../img/escaneoEOU.png);
+    height: 40rem;
+    background-size: cover;
+}
+
+.formulario{
+     background-color: var(--blanco);
+     margin: -5rem auto 0 auto;
+     width: 95%;
+     padding: 5rem;
+}
+.campo{
+     display: flex;
+     margin-bottom: 2rem;
+}
+.campo__label{
+      flex: 0 0 9rem;
+      text-align: right;
+}
+.campo__field{
+      flex: 1;
+      padding-right: 2rem;
+      border:  1px solid var(--grisclarito);
+}
+
+/*Pagina para Importancia - Monitoreo def. EOU */
+
+.contenedor-Historia { /*Importancia*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    text-align: justify;
+    align-items: center; 
+}
+
+.contenedor-Historia h3 {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.contenedor-Historia img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .contenedor-Historia {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-Historia h3 {
+        grid-column: span 1;
+    }
+}/*fin de Importancia*/
+
+.contenedor-Ubicación { /*Ubicación*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    align-items: center; 
+    text-align: justify;
+}
+
+.contenedor-Ubicación h3 {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.contenedor-Ubicación img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .contenedor-Ubicación {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-Ubicación h3 {
+        grid-column: span 1;
+    }
+} /*fin de ubicación*/
+
+/*contenedo para eventos*/
+.contenedor-eventos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.contenedor-eventos h3 {
+    text-align: center;
+}
+
+.contenedor-eventos p {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-eventos ul {
+    list-style-type: disc;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.contenedor-eventos img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .contenedor-eventos {
+        grid-template-columns: 1fr;
+    }
+}
+/* fin de la página Importancia - Monitoreo def. EOU */
+
+
+/*grid para metodología -Monitoreo def. EOU */
+
+.contenedor-metodologia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.contenedor-metodologia h3 {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.contenedor-metodologia p {
+    grid-column: span 2;
+    align-items: center;
+
+}
+
+.contenedor-metodologia img {
+    width: 100%;
+    height: auto;
+    grid-column: 1 / 2;
+}
+
+.contenedor-metodologia ul {
+    grid-column: 2 / 3;
+    padding-left: 20px;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .contenedor-metodologia {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-metodologia img {
+        grid-column: span 2;
+    }
+
+    .contenedor-metodologia ul {
+        grid-column: span 1;
+    }
+}
+/* fin del grid para metodología - Monitoreo def. EOU */
+
+/* 3D RESULTADOS - Monitoreo def. EOU */
+
+
+.contenedor-resultados {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.resultado {
+    margin-bottom: 20px;
+}
+
+.resultado h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.resultado p {
+    color: #34495e;
+    line-height: 1.6;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+}
+
+.container-results {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffff;
+}
+
+h2 {
+    color: #ffff;
+}
+
+.summary, .impact, .scan-results, .model-3d {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.scan-results video, .model-3d iframe {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    border: none;
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .scan-results, .model-3d {
+        grid-column: span 2;
+    }
+}

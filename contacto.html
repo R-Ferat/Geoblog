@@ -34,45 +34,63 @@
 
     <main class="contenedor">
         <h3 class="centrar-texto">4to Contacto<span></span></h3>
-       <div class="contacto-bg"></div>
-
-        <form class="formulario">
-            <div class="campo">
-                <label class="campo__label" for="nombre">Nombre</label>
-                <input
-                    class="campo__field"
-                    type="text"
-                    placeholder="¿Cómo se llama tu nombre?" 
-                    id="nombre"
-                    >
-            </div>
-            <div class="campo">
-                <label class="campo__label" for="email">Email</label>
-                <input 
-                     class="campo__field"
-                     type="email" 
-                     placeholder="pon aquí tu correo electrónico" 
-                     id="email"
-                     >
-            </div>
-
-            <div class="campo">
-                <label class="campo__label" for="mensaje">Mensaje</label>
-                <textarea 
-                    class="campo__field campo__field--textarea"
-                    id="mensaje"
-                    ></textarea>
-            </div>
-
-            <div class="campo">
-                <input type="submit" value="Enviar" class="boton--primario">
-            </div>
-
+        <div class="contacto-bg"></div>
+    
+        <form id="contactForm" class="formulario">
+          <div class="campo">
+            <label class="campo__label" for="nombre">Nombre</label>
+            <input class="campo__field" type="text" placeholder="¿Cómo se llama tu nombre?" id="nombre" required>
+          </div>
+          <div class="campo">
+            <label class="campo__label" for="email">Email</label>
+            <input class="campo__field" type="email" placeholder="pon aquí tu correo electrónico" id="email" required>
+          </div>
+          <div class="campo">
+            <label class="campo__label" for="mensaje">Mensaje</label>
+            <textarea class="campo__field campo__field--textarea" id="mensaje" required></textarea>
+          </div>
+          <div class="campo">
+            <input type="submit" value="Enviar" class="boton--secundario">
+          </div>
         </form>
-
-       </div>
- 
-    </main>
+      </main>
+    
+      <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(event) {
+          event.preventDefault();
+          
+          const nombre = document.getElementById('nombre').value;
+          const email = document.getElementById('email').value;
+          const mensaje = document.getElementById('mensaje').value;
+    
+          if (!nombre || !email || !mensaje) {
+            alert('Por favor, completa todos los campos.');
+            return;
+          }
+    
+          try {
+            const response = await fetch('/.netlify/functions/contact', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ nombre, email, mensaje }),
+            });
+    
+            const result = await response.json();
+            if (response.ok) {
+              alert('¡Gracias por tu mensaje! Te responderemos pronto.');
+              document.getElementById('contactForm').reset();
+            } else {
+              alert(`Error: ${result.message}`);
+            }
+          } catch (error) {
+            console.error("Error submitting the form:", error);
+            alert('Hubo un error al enviar el formulario. Por favor, intenta de nuevo.');
+          }
+        });
+      </script>
+    
 
 <footer class="footer">
     <div class="contenido">
